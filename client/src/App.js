@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import data from './data';
-import Product from './components/Product';
+import {BrowserRouter, Route} from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 
 function App() {
   
     return (
+      <BrowserRouter>
       <div className="grid-container">
         <header className="row">
         <div>
@@ -18,18 +20,14 @@ function App() {
          </div>
         </header>
         <main>
-        <div className="row center">
-        {
-          data.products.map(product => (
-           <Product key={product.id} product={product} />
-          ))
-        }
-        </div>
+        <Route path="/product/:id" component={ProductScreen} />
+        <Route path="/" component={HomeScreen} exact/>
         </main>
         <footer className="row center">
         All rights reserved!
         </footer>
       </div> 
+      </BrowserRouter>
     );
   }
   
