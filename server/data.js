@@ -20,7 +20,7 @@ const data = {
             "image": "/images/man-2.png",
             "description": "Long sleeve sweater navy with front logo print, 100% cotton",
             "price": 27.99,
-            "countInStock": 14,
+            "countInStock": 0,
             "rating": 3.0,
             "numReviews": 11,
             "availableSize": ["M", "L"]
@@ -92,7 +92,7 @@ const data = {
             "image": "/images/woman-4.png",
             "description": "Beautiful long summer beach dress with extravagant cut, green color with yellow flower prints",
             "price": 50.99,
-            "countInStock": 0,
+            "countInStock": 12,
             "rating": 4.5,
             "numReviews": 16,
             "availableSize": ["M", "L", "XL", "XXL"]
