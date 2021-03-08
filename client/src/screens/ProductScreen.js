@@ -55,7 +55,7 @@ numReviews={product.numReviews}
     Description: 
     <p>{product.description}</p>
   </li>
-  <li>
+  <li key={product.id}>
   <p>Available Size: 
             {product.availableSize.map(x=>(
                 <span> 
