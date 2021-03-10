@@ -4,7 +4,7 @@
        users: [
            {
                name: 'Simone', 
-               email: 'simone@gmail.com', 
+               email: 'simone@example.com', 
                password: bcrypt.hashSync('1234', 8),
                isAdmin: true,
            },

@@ -7,13 +7,16 @@ import Signin from './screens/Signin';
 import Cart from './screens/Cart';
 import { useDispatch, useSelector } from 'react-redux';
 import { signout } from './actions/userActions';
-import RegisterScreen from './screens/RegisterScreen';
+import ShippingAddress from './screens/ShippingAddress';
+import PaymentMethod from './screens/PaymentMethod';
+import PlaceOrder from './screens/PlaceOrder';
+// import RegisterScreen from './screens/RegisterScreen';
 
 
 function App() {
-  const cart = useSelector(state => state.cart);
+  const cart = useSelector((state) => state.cart);
   const {cartItems} = cart;
-  const userSignin = useSelector(state => state.userSignin);
+  const userSignin = useSelector((state) => state.userSignin);
   const {userInfo} = userSignin;
   const dispatch = useDispatch();
   const signoutHandler = () => {
@@ -52,7 +55,10 @@ function App() {
         <Route path="/cart/:id?" component={Cart} />
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/signin" component={Signin} />
-        <Route path="/register" component={RegisterScreen} />
+        {/* <Route path="/register" component={RegisterScreen} /> */}
+        <Route path="/shipping" component={ShippingAddress} />
+        <Route path="/payment" component={PaymentMethod} />
+        <Route path="/placeorder" component={PlaceOrder} />
         <Route path="/" component={HomeScreen} exact/>
         </main>
         <footer className="row center">

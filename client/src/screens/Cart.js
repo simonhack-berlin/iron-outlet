@@ -19,7 +19,8 @@ const removeFromCartHandler = (id) => {
   dispatch(removeFromCart(id));
 };
 const checkoutHandler = () => {
-  props.history.push('/signin?redirect=shipping');
+  // props.history.push('/signin?redirect=shipping');
+  props.history.push('/shipping');
 };
   return (
     <div className="row top">
