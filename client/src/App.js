@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
-import Signin from './screens/Signin';
+// import Signin from './screens/Signin';
 import Cart from './screens/Cart';
 import { useDispatch, useSelector } from 'react-redux';
 import { signout } from './actions/userActions';
@@ -35,7 +35,7 @@ function App() {
              <span className="badge">{cartItems.length}</span>
            )}
            </Link>
-           {
+           {/* {
              userInfo ? (
                <div className="dropdown">
                <Link to="#">
@@ -48,13 +48,13 @@ function App() {
              ) : (
               <Link to="/signin">Sign in</Link>
              )
-           }
+           } */}
          </div>
         </header>
         <main>
         <Route path="/cart/:id?" component={Cart} />
         <Route path="/product/:id" component={ProductScreen} />
-        <Route path="/signin" component={Signin} />
+        {/* <Route path="/signin" component={Signin} /> */}
         {/* <Route path="/register" component={RegisterScreen} /> */}
         <Route path="/shipping" component={ShippingAddress} />
         <Route path="/payment" component={PaymentMethod} />
