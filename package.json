@@ -1,10 +1,9 @@
 {
   "name": "iron-outlet-server",
-  "type": "module",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon --watch server --exec node --experimental-modules server/server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js"
   },
   "dependencies": {
